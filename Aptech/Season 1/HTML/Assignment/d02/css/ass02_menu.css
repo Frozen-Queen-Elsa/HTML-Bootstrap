@@ -1,0 +1,41 @@
+.container {
+    width: 1570px;
+    height: 951px;
+    border: 1px solid blue;
+    padding-bottom: 15px;
+    margin: 50px 0px 0px 50px;
+}
+
+.big {
+    width: 910px;
+    height: 925px;
+    margin: 20px;
+    border: 1px solid brown;
+    float: right;
+}
+
+.small {
+    width: 610px;
+    height: 910px;
+    float: left;
+}
+
+table {
+    margin: 20px 0px 20px 20px;
+}
+
+table tr td {
+    width: 303px;
+    height: 303px;
+    border: 1px solid green;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.9em;
+    margin: 30px 0px;
+}
+
+.preview {
+    width: 850px;
+    height: 600px;
+    margin: 20px 20px 20px 20px;
+}

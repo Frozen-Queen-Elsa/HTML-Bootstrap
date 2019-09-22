@@ -1,0 +1,95 @@
+    .container {
+        background-color: blue;
+        width: 1300px;
+        margin: 0;
+    }
+    
+    .container .header {
+        background-image: url(../images/Ass01/lighthouselogo.jpg);
+        font-weight: bold;
+        color: darkblue;
+        height: 200px;
+        width: 1170px;
+        margin: 0px 65px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 160px;
+        font-size: 1.8em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .contain {
+        width: 1170px;
+        min-height: 500px;
+        margin: 0px 50px 0px 65px;
+    }
+    
+    .main {
+        background-color: lightgreen;
+        float: left;
+        width: 880px;
+        padding: 10px;
+        font-size: 1.2em;
+        height: 550px;
+    }
+    
+    .main h2 {
+        color: #03f;
+    }
+    
+    .inside {
+        width: 900px;
+    }
+    
+    .main .inside .text {
+        float: left;
+        width: 650px;
+        word-break: hyphenate;
+    }
+    
+    .main .inside .image {
+        float: right;
+        width: 220px;
+        padding: 5px 5px 10px 0px;
+    }
+    
+    .nav {
+        float: right;
+        width: 270px;
+        margin: 0;
+        height: 570px;
+        background-color: lightskyblue;
+    }
+    
+    .nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav ul li {
+        line-height: 40px;
+        border-bottom: 2px solid #fff;
+        padding: 15px;
+    }
+    
+    .nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+    }
+    
+    .nav ul li a:hover {
+        font-weight: bold;
+    }
+    
+    .footer {
+        text-align: center;
+        background-color: rgb(72, 178, 243);
+        font-family: fantasy;
+        font-size: 1.5em;
+        width: 1170px;
+        height: 130px;
+    }
