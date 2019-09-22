@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Ass 02</title>
+    <link rel="stylesheet" href="css/ass02_menu.css" </head>
+</head>
+
+<body>
+    <div class="container">
+        <div class="small">
+            <table>
+                <tr>
+                    <td>
+                        <img id="1" src="images/Ass02/BNGW ass2  (6).jpg" alt="Món 1" onmouseover="preview(this)" width="300px" height="220px" /> Grill Lobster
+                    </td>
+                    <td>
+                        <img id="2" src="images/Ass02/BNGW ass2  (1).jpg" alt="Món 2" onmouseover="preview(this)" width="300px" height="220px" /> Beef Steak
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="3" src="images/Ass02/BNGW ass2  (3).jpg" alt="Món 3" onmouseover="preview(this)" width="300px" height="220px" /> Chicken Rice
+                    </td>
+
+                    <td>
+                        <img id="4" src="images/Ass02/BNGW ass2  (2).jpg" alt="Món 4" onmouseover="preview(this)" width="300px" height="220px" /> BBQ Squid
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <img id="5" src="images/Ass02/BNGW ass2  (1).png" alt="Món 5" onmouseover="preview(this)" width="300px" height="220px" /> Tamarind Crab
+                    </td>
+
+                    <td>
+                        <img id="6" src="images/Ass02/BNGW ass2  (7).jpg" alt="Món 6" onmouseover="preview(this)" width="300px" height="220px" /> Seafood soup
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="big">+
+            <img id="0" class="preview" src="" alt="preview">
+            <br>
+            <p id="text">...</p>
+
+        </div>
+        <script>
+            var lastImg = 1;
+            var txtid = 1;
+
+            function preview(img) {
+                document.getElementById(0).src = img.src;
+                lastImg = img.id;
+                var s = new Array;
+
+                switch (img.id) {
+                    case 1:
+                        document.getElementById("text").innerHTML = "Girll Lobster";
+                        break;
+                    case 2:
+                        document.getElementById("text").innerHTML = "Beef Steak";
+                        break;
+                    case 3:
+                        document.getElementById("text").innerHTML = "Chicken Rice";
+                        break;
+                    case 4:
+                        document.getElementById("text").innerHTML = "BBQ Squid";
+                        break;
+                    case 5:
+                        document.getElementById("text").innerHTML = "Tamarind Carb";
+                        break;
+                    case 6:
+                        document.getElementById("text").innerHTML = "Seafood soup";
+                        break;
+                }
+
+
+            }
+        </script>
+    </div>
+
+    <hr>
+
+</body>
+
+</html>
