@@ -1,0 +1,195 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        text-rendering: optimizeLegibility;
+    }
+    
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    
+    body {
+        background-image: linear-gradient(45deg, rgba(32, 105, 155, 0.8), rgba(57, 97, 96, 0.85)), url(../images/mikuHD.jpg);
+        background-size: cover;
+    }
+    
+    .container {
+        width: 1920px;
+        height: 1000px;
+        margin: 1vh auto;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px 5px rgb(17, 160, 216);
+        background-color: rgba(255, 255, 255, 0.705);
+    }
+    /* ----------------------- */
+    /* ---------Header-------- */
+    /* ----------------------- */
+    
+    .header {
+        background-color: rgb(26, 128, 26);
+        color: #fff;
+        text-align: center;
+        font-size: 34px;
+        font-weight: 800;
+        height: 8vh;
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+    /* ----------------- */
+    /* ------Nav------- */
+    /* ---------------- */
+    
+    nav {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        height: 6vh;
+        background-color: wheat;
+        margin-bottom: 3vh;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav ul li {
+        float: left;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 30px;
+        padding-left: 230px;
+        display: inline-block;
+        color: #03f;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        transition: all 0.7s;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a:active {
+        color: rgb(255, 0, 221);
+        font-size: 33px;
+    }
+    /* ------------ */
+    /* ---Section---- */
+    /* ------------ */
+    
+    section {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 2vh;
+    }
+    
+    section img {
+        width: 100%;
+        height: auto;
+    }
+    /* -------------- */
+    /* ---Footer---- */
+    /* ---------------- */
+    
+    footer {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    
+    footer p {
+        font-weight: 700;
+        font-size: 30px;
+        padding-left: 40%;
+    }
+    /* ------------------- */
+    /* -------Form-------- */
+    /* ------------------ */
+    
+    .register {
+        width: 95%;
+        border: 1px double blue;
+        margin: 0px auto;
+        background-color: rgba(255, 192, 203, 0.555);
+        margin-bottom: 20px;
+        background-image: linear-gradient(45deg, rgba(212, 201, 38, 0.8), rgba(163, 204, 16, 0.85)), url(../images/SNSDFullHD.jpg);
+        background-size: cover;
+    }
+    
+    form {
+        font-size: 28px;
+        line-height: 10px;
+    }
+    
+    input[type=password],
+    input[type=email],
+    input[type=text],
+    input[type=number] {
+        width: 90%;
+        height: 30px;
+        font-size: 20px;
+        padding-left: 10px
+    }
+    
+    input[type=radio],
+    input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    input[type=date],
+    select {
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    
+    input[type=submit],
+    input[type=reset] {
+        width: 110px;
+        height: 39px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+        margin: 10px;
+        color: #fff;
+        background-color: rgba(109, 51, 185, 0.466);
+        box-shadow: 7px 5px 3px greenyellow;
+        float: left;
+        margin-left: 30%;
+    }
+    
+    textarea {
+        width: 90%;
+        height: 100px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    
+    table {
+        font-size: 25px;
+        line-height: 130%;
+    }
+    
+    td:first-child {
+        text-align: right;
+        padding-left: 5%;
+        padding-bottom: 10px;
+        color: rgb(50, 48, 54);
+        width: 250px;
+    }
+    
+    td:last-child {
+        color: rgb(34, 35, 41);
+        padding-left: 5%;
+        width: 80%;
+    }
