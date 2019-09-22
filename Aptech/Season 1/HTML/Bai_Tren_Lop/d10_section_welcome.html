@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/d10_section.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Congratulation</h2>
+        <br>
+        <hr>
+        <br>
+        <p id="ciao"></p>
+    </div>
+</body>
+
+<script>
+    //Lấy dữ liệu trong biến session storage
+    var a = sessionStorage.getItem("uid");
+    var b = sessionStorage.getItem("pwd");
+    var s = "Chào, " + a + " !<br>";
+    s += ("Mật khẩu của bạn là : " + b + " ??? <br>");
+    document.getElementById("ciao").innerHTML = s;
+</script>
+
+</html>

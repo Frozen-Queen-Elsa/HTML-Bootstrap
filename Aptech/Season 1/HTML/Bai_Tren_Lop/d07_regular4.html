@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression Dân Tộc</title>
+</head>
+
+<body>
+    <h2>Regular Expression</h2>
+    <hr>
+    <form action="#" id="formTest" name="formTest">
+
+        <input type="text" name="txtDanToc" id="txtDanToc" placeholder="Nhập dân tộc của  bạn (Kinh,Ede,Hoa)" required>
+        <input type="submit" value="Kiểm Tra" id="btnOK">
+    </form>
+
+    <script>
+        document.getElementById("formTest").onsubmit = function() {
+            var dt = document.getElementById("txtDanToc").value;
+            var exp = new RegExp("^(kinh|ede|hoa)$", "i");
+            if (exp.test(dt)) {
+                alert("Chào mừng người anh em đồng hương");
+
+            } else {
+                alert("Chào người bạn phương xa")
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

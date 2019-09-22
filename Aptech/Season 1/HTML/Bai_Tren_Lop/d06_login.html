@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+</head>
+
+<body>
+
+    <h2>Login</h2>
+    <hr>
+    <form action="d02_p2_members.html" method="POST" id="formDN" name="formDN">
+        <input type="text" name="txtUser" id="txtUser" placeholder="Nhập tài khoản" required> <br><br>
+        <input type="password" name="txtPass" id="txtPass" placeholder="Nhập mật khẩu" required><br><br>
+        <input type="submit" value="Đăng Nhập" name="btOK">
+        <input type="reset" value="Hủy" name="btRS">
+        <input type="button" value="Đăng Ký" name="btDK" id="btDK">
+
+    </form>
+</body>
+
+<script>
+    //Lập trình cho sự kiện bấm nút Submit
+    document.getElementById("formDN").onsubmit = function() {
+        //Lấy dữ liệu nhập trong ô 'txtUser'
+        var user = document.getElementById("txtUser").value;
+
+        //Lấy dữ liệu nhập trong ô 'txtPass'
+        var pass = document.getElementById("txtPass").value;
+
+        if (user === "snsd" || user === "admin" || user === "seohyun") {
+            if (pass === "123") {
+                return true;
+            }
+        }
+        alert("Tài khoản không hợp lệ .\n Vui lòng nhập lại .");
+        return false;
+    }
+</script>
+
+</html>

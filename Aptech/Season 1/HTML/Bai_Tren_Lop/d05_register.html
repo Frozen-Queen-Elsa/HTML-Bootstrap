@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="css/d05.css">
+</head>
+
+<body>
+    <h2>Register New Member</h2>
+    <hr>
+    <div>
+        <form action="d05_login.html" method="GET">
+            Username :
+            <input type="text" name="txtID" id="txtID" placeholder="Nhap Username" value="Seohyun" required>
+
+            <br/> <br/> Password :
+            <input type="password" name="txtPass" id="txtPass" placeholder="Nhap Password" value="Girls Generation" required>
+
+            <br/> <br/> Gender :
+            <input type="radio" name="rdGender" id="rdMale"> Nam
+            <input type="radio" name="rdGender" id="rdFemale" checked> Nữ
+
+            <br/> <br/> Language :
+            <input type="checkbox" name="ckLan" id="ckEN" checked> English
+            <input type="checkbox" name="ckLan" id="ckCN" checked> Chinese
+            <input type="checkbox" name="ckLan" id="ckKR" checked> Korean
+            <input type="checkbox" name="ckLan" id="ckJP" checked> Japanese
+            <input type="checkbox" name="ckLan" id="ckVN" checked> Vietnamese
+
+            <br/> <br/>City :
+            <select name="cbCity" id="cbCity">
+                <option value="Seoul">Seoul</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Paris">Paris</option>
+                <option value="Beijing">Beijing</option>
+                <option value="HCM">Hồ Chí Minh</option>
+            </select>
+
+            <br/> <br/>Birthday :
+            <input type="date" name="txtDOB" id="txtDOB" value="1992-03-09">
+
+            <br/> <br/>Email :
+            <input type="email" name="txtEmail" id="txtEmail" value="seohyun@snsd.com" placeholder="Nhap email" required>
+
+            <br/> <br/>Phone :
+            <input type="text" name="txtPhone" id="txtPhone" value="098-765-54321" placeholder="Nhap Số điện thoại" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3,5}" required>
+
+
+            <br/> <br/>
+            <input type="submit" value="Submit" name="btnSubmit">
+            <input type="reset" value="Reset" name="btnReset">
+        </form>
+    </div>
+</body>
+
+</html>

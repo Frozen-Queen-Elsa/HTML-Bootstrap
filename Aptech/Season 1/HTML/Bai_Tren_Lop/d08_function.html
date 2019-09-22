@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+    <link rel="stylesheet" href="css/d08_function.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class=container>
+        <h2>Function demo</h2>
+        <hr>
+        <form action="#" id="formCasio" name="formCasio">
+            <label for="">Nhập số thứ 1</label>
+            <input type="number" name="txtN1" id="txtN1" value="10" required><br><br>
+            <label for="">Nhập số thứ 2</label>
+            <input type="number" name="txtN2" id="txtN2" value="20" required> <br><br> Chọn phép toán
+            <select name="cbOP" id="cbOP">
+            <option value="+">Cộng</option>
+            <option value="-">Trừ</option>
+            <option value="*">Nhân</option>
+            <option value="/">Chia</option>       
+        </select>
+            <br><br>
+
+            <input type="submit" value="Thực Hiện">
+            <input type="reset" value="Làm Lại"><br><br>
+            <hr>
+            <label for="">Kết quả</label>
+            <input type="number" name="txtKQ" id="txtKQ" readonly> <br><br>
+        </form>
+
+        <script>
+            function fnCasio(n1, n2, op) {
+                var kq = 0;
+                switch (op) {
+                    case "+":
+                        kq = n1 + n2;
+                        break;
+                    case "-":
+                        kq = n1 - n2;
+                        break;
+                    case "*":
+                        kq = n1 * n2;
+                        break;
+                    case "/":
+                        kq = n1 / n2;
+                        break;
+                }
+                return kq;
+            }
+
+            //Lập trình cho sự kiện submit của form "formCasio"
+            document.getElementById("formCasio").onsubmit = function() {
+                //lấy giá trị của ô nhập số thứ 1 và số thừ 2 
+                var x = parseInt(document.getElementById("txtN1").value);
+                var y = parseInt(document.getElementById("txtN2").value);
+
+                //Lấy phép toán được chọn trong combo box cbOP
+                var o = document.getElementById("cbOP").value;
+                var kq = fnCasio(x, y, o);
+                document.getElementById("txtKQ").value = kq;
+                return false;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

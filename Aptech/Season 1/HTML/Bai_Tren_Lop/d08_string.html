@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        div {
+            width: 700px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 22px;
+            font-family: 'Lato', sans-serif;
+            border: 1px brown solid;
+            box-shadow: 10px 10px 10px goldenrod;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>String demo</h2>
+        <hr>
+
+        <form action="#" id="formString" name="formString">
+            <label for="">Nhập 1 chuỗi ký tự</label>
+            <input type="text" name="txtS" id="txtS" value="hôm nay trời đẹp quá !!! mưa to dã man @@ !!" required>
+            <br><br>
+            <input type="submit" value="Click Me" id="btnClick" name="btnClick">
+            <input type="reset" value="Reset">
+            <br><br>
+            <hr>
+            <textarea name="txtKQ" id="txtKQ" cols="60" rows="10" readonly></textarea>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formString").onsubmit = function() {
+            var a = []; //Mảng chưa có dữ liệu
+
+            var s = new String(document.getElementById("txtS").value);
+            a.push(s + "\n\n");
+
+            //Chuyển s thanh chữ in hoa
+            a.push(s.toUpperCase());
+
+            //Vị trí cửa chữ a đầu tiên trong chuỗi s
+            a.push("Vị trí của chữ  'a' đầu tiên : " + s.indexOf("a"));
+
+            //Vị trí cửa chữ a cuối cùng trong chuỗi s
+            a.push("Vị trí của chữ  'a' cuối cùng : " + s.lastIndexOf("a"));
+
+            //Trích chuỗi con từ vị trí thứ 8, lấy 8 ký tự trong chuỗi s
+            a.push("Chuỗi con từ vị trí thứ 8, lấy 8 ký tự : " + s.substr(8, 8));
+
+            //Tìm và thay thế tất cả ký tự 'a' thành 'A'
+            a.push("Tìm và thay thế tất cả chữ 'a' thành 'A' : " + s.replace(/a/g, "A"));
+
+            document.getElementById("txtKQ").value = a.join("\n");
+            return false;
+        };
+    </script>
+</body>
+
+</html>

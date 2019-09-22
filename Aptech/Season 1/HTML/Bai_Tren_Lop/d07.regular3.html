@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression SDT</title>
+</head>
+
+<body>
+    <h2>Regular Expression</h2>
+    <hr>
+    <form action="#" id="formTest" name="formTest">
+
+        <input type="text" name="txtPhone" id="txtPhone" placeholder="Nhập SDT của bạn (xxx-xxx-xxxxx)" required>
+        <input type="submit" value="Kiểm Tra" id="btnOK">
+    </form>
+
+    <script>
+        document.getElementById("formTest").onsubmit = function() {
+            var dt = document.getElementById("txtPhone").value;
+            var exp = new RegExp("\\d{3}-\\d{3}-\\d{3,5}$");
+            if (exp.test(dt)) {
+                alert("Chúc mừng , đt đã nhập hợp lệ");
+
+            } else {
+                alert("Rất tiếc sdt nhập không hợp lệ xin hãy nhập lại ")
+            }
+            return false;
+
+        }
+    </script>
+</body>
+
+</html>

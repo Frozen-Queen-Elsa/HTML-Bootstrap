@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(245, 245, 220, 0.767);
+            border: 1px solid brown;
+            box-shadow: 5px 5px 5px 5px green;
+            border-radius: 10px;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Canvas Demo</h2>
+    <hr>
+
+    <canvas id="bangve" name="bangve">
+       
+    </canvas>
+
+    <script>
+        var bangve = document.getElementById("bangve");
+        var context = bangve.getContext("2d");
+        var context2 = bangve.getContext("2d");
+        //Khởi tạo bút vẽ
+        context.beginPath();
+
+        //set màu vẽ
+        context.fillStyle = "pink";
+
+
+        //Vẽ hình chữ nhật tại tọa độ (x1,y1) = (20,30) , (x2,ỳ)=(200,50)
+        context.rect(20, 30, 200, 50);
+
+
+        //Tô màu
+        context.fill(pink);
+    </script>
+</body>
+
+</html>

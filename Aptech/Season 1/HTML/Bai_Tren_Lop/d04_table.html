@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    table {
+        font-family: 'Times New Roman', Times, serif;
+        width: 80%;
+        font-size: 1.2em;
+        border: solid blue thin;
+        padding: 20px 20px 20px 20px;
+        margin: 0 auto;
+        border-radius: 1em;
+        box-shadow: 9px 8px 5px pink;
+    }
+    
+    th {
+        padding: 5px 15px;
+    }
+    
+    tbody tr:nth-child(even) {
+        background-color: wheat;
+    }
+    
+    tbody tr:nth-child(odd) {
+        background-color: pink;
+    }
+    
+    tbody tr:hover {
+        color: blue;
+        background-color: lightgreen;
+    }
+    
+    tfoot,
+    tbody td:first-child,
+    tbody td:nth-child( 3) {
+        text-align: center;
+    }
+    
+    tbody td:last-child {
+        text-align: right;
+    }
+    
+    td,
+    th {
+        border: solid green thin;
+    }
+</style>
+
+<body>
+    <h2>Danh sách sinh viên</h2>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Giới Tính</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Seohyun</td>
+                <td>Nữ</td>
+                <td>seohyun@gmail.com</td>
+                <td>099-999-999</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Taeyeon</td>
+                <td>Nữ</td>
+                <td>taeyeon@gmail.com</td>
+                <td>098-989-898</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jessica</td>
+                <td>Nữ</td>
+                <td>jessica@gmail.com</td>
+                <td>098-888-888</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tiffany</td>
+                <td>Nữ</td>
+                <td>tiffany@gmail.com</td>
+                <td>098-686-868</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Yoona</td>
+                <td>Nữ</td>
+                <td>yoona@gmail.com</td>
+                <td>098-765-432</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Tổng cộng có 5 member</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

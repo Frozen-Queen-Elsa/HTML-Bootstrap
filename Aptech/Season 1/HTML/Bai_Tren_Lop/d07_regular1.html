@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular</title>
+</head>
+
+<body>
+    <h2>Regular</h2>
+    <hr>
+    <form action="#" id="formTest" name="formTest">
+        <input type="text" name="txtUser" id="txtUser" placeholder="Nhập tên của tôi " required />
+        <br><br>
+        <input type="submit" value="Kiểm Tra" id="btnOK" name="btnOK">
+        <input type="reset" value="Hủy" id="btnHuy" name="btnHuy">
+    </form>
+    <script>
+        //Tác giả :Seohyun
+        document.getElementById("formTest").onsubmit = function() {
+            var ten = document.getElementById("txtUser").value;
+            //Tạo biểu thức quy tắc để kiếm tra tên tác giả có phải là Seohyun hay không?
+            var exp = /^(seohyun|tam)`$/i;
+
+            //Kiểm tra  , so khớp biểu thức quy tắc với chuỗi nhập lưu trong biến "tên"
+            if (exp.test(ten)) {
+                alert("Bạn giỏi quá à !!!!");
+            } else {
+                alert("Rất tiếc , sai rồi !!!!");
+            }
+            return false; // Không chuyển dữ liệu lên server
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng ký</title>
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="css/d06.css">
+</head>
+
+<body>
+    <h2>Register</h2>
+    <hr>
+    <form action="d06_login.html" method="get" name="formDK" id="formDK">
+        <div>
+
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="txtUser" id="txtUser" required value="seohyun"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="txtPass1" id="txtPass1" required value="123"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="txtPass2" id="txtPass2" required value="123"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="txtEmail" id="txtEmail" value="seohyun@snsd.com"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select name="cbCity" id="cbCity">
+                        <option value="HCM">Hồ Chí Minh</option>
+                        <option value="HN">Hà Nội</option>
+                        <option value="DN">Đà Nẵng</option>
+                        <option value="HU">Huế</option>
+                        <option value="HP">Hải Phòng</option>
+                </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Đăng ký" name="btDK">
+                        <input type="reset" value="Làm Lại" name="btHuy">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Thông tin đăng ký</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea name="txtThongTin" id="txtThongTin" cols="80" rows="10">...</textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("formDK").onsubmit = function() {
+            var ten = document.getElementById("txtUser").value;
+            var mk1 = document.getElementById("txtPass1").value;
+            var mk2 = document.getElementById("txtPass2").value;
+            var mail = document.getElementById("txtEmail").value;
+            var city = document.getElementById("cbCity").value;
+
+            var exp1 = new RegExp("^[0-9a-z]{3,8}$", "i");
+            if (exp1.test(ten) == false) {
+                alert("Tài khoản không hợp lệ");
+                document.getElementById("txtUser").focus();
+                return false;
+            }
+
+            var exp2 = new RegExp("^\\S{3,8}$");
+            if (!exp1.test(mk1)) {
+                alert("Mật khẩu không hợp lệ");
+                document.getElementById("txtPass1").focus();
+                return false;
+            }
+
+            //Kiểm tra mk1 và mk2
+            if (mk1 !== mk2) {
+                alert("Mật khẩu nhập lại không giống mật khẩu !!! \n Vui long nhập lại");
+                document.getElementById("txtPass2").focus();
+                return false;
+            }
+            //Xử lý xuất thông tin 
+            var a = new Array();
+            //Lưu các dữ liệu vào mảng
+            a.push("Tên đăng nhập : " + ten);
+            a.push("Mật khẩu : " + mk1);
+            a.push("Email : " + mail);
+            a.push("Thành phố : " + city);
+
+            //Nối các phần tử trong mảng với nhau thành 1 chuỗi , Các phần tử cách nhau bằng ký tự xuống hàng\n
+            var s = a.join("\n");
+
+            //Đưa chuỗi s vào ô thông tin tóm tắt "txtThongTin"
+            document.getElementById("txtThongTin").value = s;
+            alert(s);
+            return false;
+        };
+    </script>
+</body>
+
+</html>

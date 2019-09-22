@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression Tên</title>
+</head>
+
+<body>
+    <h2>Regular Expression</h2>
+    <hr>
+    <form action="#" id="formTest" name="formTest">
+        <input type="text" name="txtName" id="txtName" placeholder="Nhập tên của bạn" required>
+        <input type="submit" value="Kiểm Tra" id="btnOK">
+    </form>
+
+    <script>
+        document.getElementById("formTest").onsubmit = function() {
+            var ten = document.getElementById("txtName").value;
+
+            //Tạo quy tắc để kiểm tra tính hợp lệ của  tên được nhập
+            var exp = new RegExp("^[a-z ]{2,30}$", "i");
+            //Kiễm Tra
+            if (exp.test(ten)) {
+                alert("Chúc mừng nhập hợp lệ")
+            } else {
+                alert("Rất tiếc, tên nhập không hợp lệ \nVui lòng nhập lại");
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

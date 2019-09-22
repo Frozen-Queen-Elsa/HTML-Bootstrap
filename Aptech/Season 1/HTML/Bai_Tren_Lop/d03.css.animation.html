@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition Demo</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50px;
+            position: relative;
+            animation: IRIS 4s linear 1s 4 alternate forwards;
+        }
+
+        @keyframes IRIS {
+            from {
+                background-color: red;
+                left: 0px;
+            }
+
+            to {
+                background-color: springgreen;
+                left: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2> CSS Animation Demo</h2>
+    <hr>
+    <div>
+
+    </div>
+</body>
+
+</html>

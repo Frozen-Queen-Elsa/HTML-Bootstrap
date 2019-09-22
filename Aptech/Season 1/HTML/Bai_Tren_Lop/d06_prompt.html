@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt</title>
+</head>
+
+<body>
+    <h2>Javascript-promt</h2>
+    <hr>
+    <script>
+        var x = prompt("Nhập số thứ 1: ", 10);
+        var y = prompt("Nhập số thứ 2: ", 30);
+
+        if (isNaN(x) || isNaN(y)) {
+            alert("Giá trị nhập không hợp lệ")
+        } else {
+            var z = parseInt(x) & parseInt(y);
+            document.write(x + " + " + y + " = " + z);
+        }
+    </script>
+</body>
+
+</html>

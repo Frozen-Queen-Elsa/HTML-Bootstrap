@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        /*    div {
+            width: 700px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 22px;
+            font-family: 'Lato', sans-serif;
+            border: 1px brown solid;
+            box-shadow: 10px 10px 10px goldenrod;
+            color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Math demo</h2>
+        <hr>
+        <form action="" id="formMath" name="formMath">
+            <label for="" Nhập 1 số [1-6]></label>
+            <input type="number" name="txtN" id="txtN" min="1" max=" 6" value="1">
+            <br><br>
+            <input type="submit" value="Open" id="btnOK" name="btnOK">
+
+            <br><br>
+            <hr>
+            <p id="kq"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formMath").onsubmit = function() {
+            var x = parseInt(document.getElementById("txtN").value);
+
+            //Tạo 1 số ngẫu nhiên từ 1-6 
+            var numRandom = Math.round(Math.random() * 5 + 1);
+
+            //Kiểm tra
+            if (x == numRandom) {
+                document.getElementById("kq").innerHTML = "Bạn đã đoán đúng !!! ";
+            } else {
+                document.getElementById("kq").innerHTML = "Rất tiếc bạn đã đoán sai !!!! <br> Số được sinh ra là số " + numRandom;
+            }
+            return false;
+        };
+    </script>
+</body>
+
+</html>

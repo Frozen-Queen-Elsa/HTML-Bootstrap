@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Output</title>
+
+</head>
+
+<body>
+    <h2>Output Demo</h2>
+    <hr>
+    <div>
+        <form action="" oninput="txtAmt.value=parseInt(cbProduct.value)*parseInt(txtQty.value)">
+            Product:
+            <select name="cbProduct" id="cbProduct">
+            <option value="12000">Coca cola -12000</option>
+            <option value="11000">Sting dâu -11000</option>
+            <option value="5000">Aquarina -5000</option>
+            <option value="50000">Cafe Cappuchino - 50000</option>
+            <option value="150000">Gà Rán KFC - 150000</option>
+        </select>
+            <br/><br/> Quantity :
+            <input type="number" name="txtQty" id="txtQty" min=1 max=100 step="1" value="2">
+            <br/><br/> Total Amount :
+            <output id="txtAmt" name="txtAmt"></output>
+            <br/>
+
+        </form>
+    </div>
+</body>
+
+</html>

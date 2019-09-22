@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eval</title>
+</head>
+
+<body>
+    <h2>Javascript - eval()</h2>
+    <hr>
+    <form action="#">
+        Nhập 1 biểu thức :
+        <input type="text" name="txtExp" id="txtExp" required />
+        <input type="button" value="Thực hiện" id="btCalculate" name="btCalculate">
+        <br><br> Kết quả là :
+        <input type="text" name="txtResult" id="txtResult" readonly />
+
+    </form>
+
+    <script>
+        document.getElementById("btCalculate").onclick = function() {
+            //Lấy dữ liệu nhập trong ô text "txtExp" , lưu vô biến "Exp"
+            var exp = document.getElementById("txtExp").value;
+            var result = eval(exp);
+
+            //Đưa kết quả đánh giá "result" vào ô thứ "txtResult"
+            document.getElementById("txtResult").value = result;
+        };
+    </script>
+</body>
+
+</html>

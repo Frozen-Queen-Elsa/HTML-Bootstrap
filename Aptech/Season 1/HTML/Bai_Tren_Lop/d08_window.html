@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window</title>
+    <link rel="stylesheet" href="css/d08_function.css">
+</head>
+
+<body>
+    <div>
+        <h2>Window demo</h2>
+        <hr>
+        <p id="pDate"></p>
+        <form action="" id="formLogin" name="formLogin">
+            <label for="">Nhập username : </label>
+            <input type="text" name="txtUser" id="txtUser" value="seohyun">
+            <br><br>
+            <label for="">Nhập password:</label>
+            <input type="password" name="txtPass" id="txtPass" value="GirlsGeneration">
+            <br><br>
+            <input type="submit" value="Sign In">
+            <input type="reset" value="Reset">
+        </form>
+
+        <script>
+            var d = new Date();
+            var today = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
+            document.getElementById("pDate").innerHTML = "Hôm nay : " + today;
+
+            document.getElementById("formLogin").onsubmit = function() {
+                var uid = document.getElementById("txtUser").value;
+                var pwd = document.getElementById("txtPass").value;
+
+                if (uid == "seohyun" && pwd == "GirlsGeneration") {
+                    //Mở 1 tab mới trong trình duyệt
+                    var newTab = window.open();
+                    var s = "<link rel='stylesheet' href='css/d08_function.css'>";
+                    newTab.document.write(s);
+                    //Hiện 1 số thông tin trong tab này
+                    newTab.document.write("<h2>Xin chào, " + uid + " !</h2>");
+                    newTab.document.write("<p>Chúc mừng bạn đã đăng nhập thành công ! </p>");
+
+                } else {
+                    alert("Rất tiếc , bạn đã nhập sai tài khoản / mật mã !!!");
+                    return false;
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

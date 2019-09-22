@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section</title>
+    <link rel="stylesheet" href="css/d10_section.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class=container>
+        <h2>Section</h2>
+        <br>
+        <hr>
+        <br>
+        <h3>Sign In</h3>
+        <form action="d10_section_welcome.html" method="POST" id="formlogin" nam="formlogin">
+            <input type="text" name="txtUser" id="txtUser" placeholder="Nhập UserName" value="seohyun" required>
+            <br><br>
+            <input type="password" name="txtPass" id="txtPass" placeholder="Nhập Password" value="GirlsGeneration" required>
+            <br> <br>
+            <input type="submit" value="Submit" id="btnSubmit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formlogin").onsubmit = function() {
+            var user = document.getElementById("txtUser").value;
+            var pass = document.getElementById("txtPass").value;
+
+            //kiem tra tai khoan dang nhap dung ko ?
+            if ((user == "seohyun" && pass == "GirlsGeneration") || (user == "tam" && pass == "123")) {
+                //Đây là tài khoản hợp lệ -> Lưu vô Session
+                sessionStorage.setItem("uid", user);
+                sessionStorage.setItem("pwd", pass);
+                return true;
+            } else {
+                alert("Tài khoản không hợp lệ\n XIn vui lòng nhập lại");
+                document.getElementById("txtUser").focus();
+                return false;
+            }
+        };
+    </script>
+</body>
+
+</html>
