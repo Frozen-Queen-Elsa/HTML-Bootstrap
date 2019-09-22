@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgba(202, 106, 214, 0.651), rgba(13, 179, 41, 0.726)), url(https://images.alphacoders.com/201/thumb-1920-201591.jpg);
+    background-size: cover;
+}
+
+.container {
+    width: 800px;
+    border: 1px solid rgb(88, 23, 209);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    box-shadow: 4px 5px 6px 3px violet;
+    /* box-shadow: x-y-độ mờ-độ lan-màu*/
+    margin: 10px auto;
+    background-color: rgba(208, 209, 140, 0.596);
+    color: rgb(255, 0, 221);
+    padding: 10px 30px;
+}

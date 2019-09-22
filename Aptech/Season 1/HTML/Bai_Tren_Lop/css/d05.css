@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/SNSDFullHD.jpg);
+}
+
+input:required {
+    background-color: aquamarine;
+}
+
+input:valid {
+    color: darkblue;
+}
+
+input:invalid {
+    color: red
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 150px;
+}
+
+div {
+    margin: 150px auto;
+    padding: 10px;
+    width: 700px;
+    border: thick groove darkturquoise;
+    background-color: hsla(303, 85%, 55%, 0.644);
+}
