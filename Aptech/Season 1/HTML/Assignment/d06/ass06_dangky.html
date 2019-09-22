@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng Ký</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ass06_home.css">
+</head>
+
+<body>
+    <div class=register_container>
+        <form action="ass06_login.html" id="formDK" name="formDK">
+            <h2>Create Account</h2>
+            <h3>Your Name</h3>
+            <input type="text" name="txtUser" id="txtUser" value="Seohyun" required>
+            <h3>Email</h3>
+            <input type="email" name="txtEmail" id="txtEmail" value="seohyun@snsd.com" required>
+            <h3>Password</h3>
+            <input type="password" name="txtPass1" id="txtPass1" value="GirlsGeneration" required>
+            <p class="note">Password must be least 6 characters.</p>
+            <h3>Re-enter Password</h3>
+            <input type="password" name="txtPass2" id="txtPass2" value="GirlsGeneration" required>
+
+            <input class="btn" type="submit" value="Create your Account" id="btnCreat">
+
+            <p>
+                By creating your account, you must agree to Amazon's <a href="#">Conditions of Use </a> and<a href="#">Privacy Notice</a>
+            </p>
+            <hr>
+            <p>Already have an account ? <a href="ass06_login.html">Sign in</a></p>
+        </form>
+    </div>
+
+
+    <script>
+        document.getElementById("formDK").onsubmit = function() {
+            var user = document.getElementById("txtUser").value;
+            var email = document.getElementById("txtEmail").value;
+            var pass1 = document.getElementById("txtPass1").value;
+            var pass2 = document.getElementById("txtPass2").value;
+
+            var exp_user = new RegExp("^[0-9a-z]{4-8}$", "i");
+            var exp_pass1 = new RegExp("^\\S{3-15}$", "i");
+
+            if (!exp_user.test(user)) {
+                alert("Tài khoản không hợp lệ\n Tài khoản gồm 4>8 chữ số hoặc chữ cái \n Xin vui lòng nhập lại");
+                document.getElementById("txtUser").focus();
+                return false;
+            }
+
+            if (!exp_pass1.test(pass1)) {
+                alert("Mật khẩu không hợp lệ \n Xin vui lòng nhập lại ");
+                document.getElementById("txtPass1").focus();
+                return false;
+            }
+
+            if (pass1 !== pass2) {
+                alert("Xác nhận mật không chính xác \n Xin vui lòng nhập lại");
+                document.getElementById("txtPass2").focus();
+                return false;
+            }
+        };
+    </script>
+</body>
+
+</html>
