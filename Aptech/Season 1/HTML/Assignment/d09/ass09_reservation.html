@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation</title>
+    <!-- Grid.css -->
+    <link rel="stylesheet" href="Gird css/grid.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/cc7d5b8894.js" crossorigin="anonymous"></script>
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="css/ass09.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="images/Ass09/logo.PNG" alt="logo">
+            <div class="nav">
+                <ul>
+                    <li><a href="ass09_home.html">Home</a></li>
+                    <li><a href="#">All Recipes</a></li>
+                    <li><a href="">Reservation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <a href="ass09_home.html"><img class="icon" src="images/Ass09/signin.PNG" alt="" width="5px" height="auto"></a>
+        </div>
+        <section>
+            <div class="reservation">
+                <table>
+                    <form action="#" id="formDK" name="formDK">
+                        <thead>
+                            <h2>Your Choice</h2>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Customer Name</td>
+                                <td><input type="text" name="txtName" id="txtName" value="Seohyun"></td>
+                            </tr>
+                            <tr>
+                                <td>Telephone</td>
+                                <td><input type="number" name="txtPhone" id="txtPhone" value="0987654321"></td>
+                            </tr>
+                            <tr>
+                                <td>Menu</td>
+                                <td>
+                                    <select name="cbMenu" id="cbMenu">
+                                    <option value="Chrismass">Chrismas</option>
+                                    <option value="ThanksGiving">ThanksGiving</option>
+                                    <option value="Halloween">Halloween</option>
+                                    <option value="Easter">Easter</option>                                    
+                                    <option value="4th July">4th July</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Drinking</td>
+                                <td>
+                                    <select name="cbDrink" id="cbDrink">
+                                    <option value="Wine">Wine</option>
+                                    <option value="Cocktail">Cocktail</option>
+                                    <option value="Coffee">Coffee</option>
+                                    <option value="Tea">Tea</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Submit"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="2">
+                                <b>Your Information</b>
+                                <br>
+                                <textarea name="txtInfo" id="txtInfo">...</textarea>
+                            </td>
+                        </tfoot>
+                    </form>
+                </table>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById("formDK").onsubmit = function() {
+        var name = document.getElementById("txtName").value;
+        var phone = document.getElementById("txtPhone").value;
+        var menu = document.getElementById("cbMenu").value;
+        var drink = document.getElementById("cbDrink").value;
+        var info = document.getElementById("txtInfo").value;
+
+        var testname = new String(document.getElementById("txtName").value);
+        if (testname.trim().length == 0) {
+            alert("The name can not be blank");
+            return false;
+            document.getElementById("formDK").onreset;
+        }
+        var testphone = new String(document.getElementById("txtPhone").value);
+        if (testphone.trim().length == 0) {
+            alert("The phone number can not be blank");
+            return false;
+            document.getElementById("formDK").onreset;
+        }
+        var a = new Array();
+        a.push("Customer Information");
+        a.push("--------------------");
+        a.push("Customer Name : " + name);
+        a.push("Phone Number : " + phone);
+        a.push("Menu : " + menu);
+        a.push("Drinking : " + drink);
+        a.push("-------------------");
+        a.push("Thank you for your oder")
+        s = a.join("\n");
+        document.getElementById("txtInfo").value = s;
+        return false;
+    };
+</script>
+
+</html>
