@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code mẫu Table Form</title>
+    <!-- Grid.css -->
+    <link rel="stylesheet" href="Gird css/grid.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/cc7d5b8894.js" crossorigin="anonymous"></script>
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- file style css dùng chung cho CodeMau_form.html và CodeMau_tableform.html-->
+    <link rel="stylesheet" href="css/CodeMau_Form.css">
+</head>
+
+<!----------------------------------->
+<!--------Code mẫu Table Form-------->
+<!-----------Creater:IRIS------------>
+<!----------------------------------->
+
+<body>
+
+    <div class="container">
+        <section>
+            <div class="register">
+
+                <!-- Khởi tạo table -->
+                <table>
+                    <!-- Khởi tạo form -->
+                    <!-- class table_form để tiện cho việc chỉnh sửa css của trang web CodeMau_tableform.html -->
+                    <form class="table_form" action="ass08_home.html" id="formRegister" name="formRegister">
+                        <!-- Khởi tạo Table Header -->
+                        <thead>
+                            <h2>REGISTER</h2>
+                        </thead>
+                        <!-- Khởi tạo Table Body -->
+                        <tbody>
+                            <tr>
+                                <!-- Text User -->
+                                <td>User Name</td>
+                                <td><input type="text" name="txtUser" id="txtUser" value="seohyun" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Password Password -->
+                                <td>Password</td>
+                                <td><input type="password" name="txtPass1" id="txtPass1" value="GirlsGeneration" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Password Confirm Password -->
+                                <td>Confirm Password</td>
+                                <td><input type="password" name="txtPass2" id="txtPass2" value="GirlsGeneration" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Email Email -->
+                                <td>Email</td>
+                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Text Name -->
+                                <td>Full Name</td>
+                                <td><input type="text" name="txtName" id="txtName" value="Seo Joo Hyun (서주현)" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Date Date of Birth  (yyyy-mm-dd) -->
+                                <td>Date of Birth</td>
+                                <td><input type="date" name="txtDOB" id="txtDOB" value="1991-06-28"></td>
+                            </tr>
+                            <tr>
+                                <!-- Number Phone -->
+                                <td>Phone Number</td>
+                                <td><input type="number" name="txtPhone" id="txtPhone" value="0987654321" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Text Address -->
+                                <td>Address</td>
+                                <td><input type="text" name="txtAddress" id="txtAddress" value="SM Tower, Seoul, Korea"></td>
+                            </tr>
+                            <tr>
+                                <!-- Radio Gender -->
+                                <td>Gender</td>
+                                <td>
+                                    <input type="radio" name="rdGender" id="rdMale"> Male
+                                    <input type="radio" name="rdGender" id="rdFemale" checked> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Checkbox Hobbies -->
+                                <td>Hobbies</td>
+                                <td>
+                                    <input type="checkbox" name="ck1" id="ck1" checked>111
+                                    <input type="checkbox" name="ck2" id="ck2" checked>222
+                                    <input type="checkbox" name="ck3" id="ck3" checked>333
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Select City -->
+                                <td>City</td>
+                                <td>
+                                    <select name="cbCity" id="cbCity">
+                                    <option value="HoChiMinh">TP Hồ Chí Minh</option>
+                                    <option value="HaNoi">TP Hà Nội</option>                        
+                                    <option value="CanTho">TP Cần Thơ</option>
+                                    <option value="DaNang">TP Đà Nẵng</option>
+                                    <option value="HaiPhong">TP Hải Phòng</option>
+                                    <option value="BaRia">Bà Rịa</option>
+                                    <option value="BaoLoc">Bảo Lộc</option>
+                                    <option value="BacLieu">Bạc Liêu</option>
+                                    <option value="BacGiang">Bắc Giang</option>
+                                    <option value="BacKan">Bắc Kạn</option>
+                                    <option value="BacNinh">Bắc Ninh</option>
+                                    <option value="BenTre">Bến Tre</option>
+                                    <option value="BienHoa">Biên Hòa</option>
+                                    <option value="BuonMaThuot">Buôn Ma Thuột</option>
+                                    <option value="CamRanh">Cam Ranh</option>
+                                    <option value="CaoBang">Cao Bằng</option>
+                                    <option value="CaoLanh">Cao Lãnh</option>
+                                    <option value="CaMau">Cà Mau</option>
+                                    <option value="CamPha">Cẩm Phả</option>
+                                    <option value="ChauDoc">Châu Đốc</option>
+                                    <option value="ChiLinh">Chi Linh</option>
+                                    <option value="DaLat">Đà Lạt</option>
+                                    <option value="DienBienPhu">Điện Biên Phủ</option>
+                                    <option value="DongHa">Đông Hà</option>
+                                    <option value="DongHoi">Đồng Hới</option>
+                                    <option value="DongXoai">Đồng Xoài</option>
+                                    <option value="HaiDuong">Hải Dương</option>
+                                    <option value="HaGiang">Hà Giang</option>
+                                    <option value="HaTien">Hà Tiên</option>
+                                    <option value="HaTinh">Hà Tĩnh</option>
+                                    <option value="Halong">Hạ Long</option>
+                                    <option value="HoaBinh">Hòa Bình</option>
+                                    <option value="HoiAn">Hội An</option>
+                                    <option value="Hue">Huế</option>
+                                    <option value="HungYen">Hưng Yên</option>
+                                    <option value="KonTum">Kon Tum</option>
+                                    <option value="LaiChau">Lai Châu</option>
+                                    <option value="LaoCai">Lào Cai</option>
+                                    <option value="LangSon">Lạng Sơn</option>
+                                    <option value="LongKhanh">Long Khánh</option>
+                                    <option value="LongXuyen">Long Xuyên</option>
+                                    <option value="MongCai">Móng Cái</option>
+                                    <option value="MyTho">Mỹ Tho</option>
+                                    <option value="NamDinh">Nam Định</option>
+                                    <option value="NhaTrang">Nha Trang</option>
+                                    <option value="NinhBinh">Ninh Bình</option>
+                                    <option value="PhanRang">Phan Rang</option>
+                                    <option value="PhanThiet">Phan Thiết</option>
+                                    <option value="PhucYen">Phúc Yên</option>
+                                    <option value="PhuLy">Phủ Lý</option>
+                                    <option value="Pleiku">Pleiku</option>
+                                    <option value="QuangNgai">Quảng Ngãi</option>
+                                    <option value="QuyNhon">Quy Nhơn</option>
+                                    <option value="RachGia">Rạch Giá</option>
+                                    <option value="SaDec">Sa Đéc</option>
+                                    <option value="SamSon">Sầm Sơn</option>
+                                    <option value="SocTrang">Sóc Trăng</option>
+                                    <option value="SongCong">Sông Công</option>
+                                    <option value="SonLa">Sơn La</option>
+                                    <option value="TamDiep">Tam Điệp</option>
+                                    <option value="TamKy">Tam Kỳ</option>
+                                    <option value="TanAn">Tân An</option>
+                                    <option value="TayNinh">Tây Ninh</option>
+                                    <option value="ThanhHoa">Thanh Hóa</option>
+                                    <option value="ThaiBinh">Thái Bình</option>
+                                    <option value="ThaiNguyen">Thái Nguyên</option>
+                                    <option value="ThuDauMot">Thủ Dầu Một</option>
+                                    <option value="TraVinh">Trà Vinh</option>
+                                    <option value="TuyenQuang">Tuyên Quang</option>
+                                    <option value="TuyHoa">Tuy Hòa</option>
+                                    <option value="UongBi">Uông Bí</option>
+                                    <option value="VietTri">Việt Trì</option>
+                                    <option value="Vinh">Vinh</option>
+                                    <option value="ViThanh">Vi Thanh</option>
+                                    <option value="VinhLong">Vĩnh Long</option>
+                                    <option value="VinhYen">Vĩnh Yên</option>
+                                    <option value="VungTau">Vũng Tàu</option>
+                                    <option value="YenBai">Yên Bái</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Textarea Comment -->
+                                <td>Comment</td>
+                                <td><textarea name="txtComment" id="txtComment"></textarea></td>
+                            </tr>
+                        </tbody>
+                        <!-- Khởi tạo Table Footer -->
+                        <tfoot>
+                            <tr>
+                                <!-- Ghép 2 cột thành 1 -->
+                                <td colspan="2">
+                                    <!-- Button Submit -->
+                                    <input type="submit" value="Register" id="btnRegister" name="btnRegister">
+                                    <!-- Button Reset -->
+                                    <input type="reset" value="Reset" id="btnReset" name="btnReset">
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </form>
+                </table>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- -------------- -->
+    <!-- ----Script---- -->
+    <!-- -------------- -->
+    <script>
+        document.getElementById("formRegister").onsubmit = function() {
+            //Khai báo các giá trị dữ liệu trong form
+            var user = document.getElementById("txtUser").value;
+            var pass1 = document.getElementById("txtPass1").value;
+            var pass2 = document.getElementById("txtPass2").value;
+            var email = document.getElementById("txtEmail").value;
+            var name = document.getElementById("txtName").value;
+            var dob = document.getElementById("txtDOB").value;
+            var phone = document.getElementById("txtPhone").value;
+            var address = document.getElementById("txtAddress").value;
+            var city = document.getElementById("cbCity").value;
+            var comment = document.getElementById("txtComment").value;
+            //Check Gender Nam or Nữ
+            if (document.getElementById("rdMale").checked == true) {
+                var gender = "Male"
+            } else {
+                var gender = "Female";
+            }
+            //Check Hobbies
+            var hobbie = " ";
+            if (document.getElementById("ck1").checked == true) {
+                hobbie = hobbie + " 111 ";
+            }
+            if (document.getElementById("ck2").checked == true) {
+                hobbie = hobbie + " 222 ";
+            }
+
+            if (document.getElementById("ck3").checked == true) {
+                hobbie = hobbie + " 333 ";
+            }
+            if (document.getElementById("ck1").checked == true && document.getElementById("ck2").checked == true && document.getElementById("ck3").checked == true) {
+                hobbie = hobbie + " none ";
+            }
+
+
+            //Kiểm tra Username
+            var exp1 = new RegExp("^[0-9a-z]{3,10}$", "i");
+            if (!exp1.test(user)) {
+                alert("Tài khoản không hợp lệ\n Tài khoản gồm 3>10 chữ số hoặc chữ cái \n Xin vui lòng nhập lại");
+                document.getElementById("txtUser").focus();
+                return false;
+            }
+
+            //Kiểm tra Password
+            var exp2 = new RegExp("^\\S{3,25}$");
+            if (exp2.test(pass1) == false) {
+                alert("Mật khẩu không hợp lệ \n Xin vui lòng nhập lại ");
+                document.getElementById("txtPass1").focus();
+                return false;
+            }
+
+            //Kiểm tra Confirm Password
+            if (pass1 !== pass2) {
+                alert("Xác nhận mật không chính xác \n Xin vui lòng nhập lại");
+                document.getElementById("txtPass2").focus();
+                return false;
+            }
+
+
+            //Khai báo mảng 
+            var a = new Array();
+            a.push("Member Information");
+            a.push("------------------");
+            a.push("Username : " + user);
+            a.push("Password : " + pass1);
+            a.push("Email : " + email);
+            a.push("Full name : " + name);
+            a.push("Phone number : " + phone);
+            a.push("Address : " + address);
+            a.push("City : " + city);
+            a.push("Gender : " + gender);
+            a.push("Hobbies : " + hobbie);
+            a.push("Comment : " + comment);
+            a.push("---------------------------------------------------");
+            a.push("Thank you to become a new member of our website !!!");
+            //Khai báo chuỗi s là chuỗi a được nối với nhau bằng khoảng trắng
+            var s = a.join("\n");
+            //Thông báo thông tin đã được đăng ký
+            alert(s);
+            return false;
+        };
+    </script>
+
+</body>
+
+
+
+</html>
