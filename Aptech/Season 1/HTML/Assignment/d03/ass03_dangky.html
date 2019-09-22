@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ass 03 Sign Up</title>
+    <link rel="stylesheet" href="css/ass03_signup.css">
+</head>
+
+<body>
+    <form action="ass03_login.html" method="get" id="formDK" name="formDK">
+        <h2>Sign Up</h2>
+        <hr>
+        <h3>Your basic info</h3>
+        <span>Name :</span>
+        <br>
+        <input type="text" name="txtUser" id="txtUser" placeholder="Nhập Username" value="seohyun" required>
+        <br><br>
+        <span>Email :</span>
+        <br>
+        <input type="email" name="txtEmail" id="txtEmail" placeholder="Nhập Email" value="seohyun@snsd.com" required>
+        <br><br>
+        <span>Password :</span>
+        <br>
+        <input type="password" name="txtPass1" id="txtPass1" placeholder="Nhập Password" value="123" required>
+        <br><br>
+        <span>Confirm Password :</span>
+        <br>
+        <input type="password" name="txtPass2" id="txtPass2" placeholder="Nhập lại Password" value="123" required>
+        <br><br>
+        <span>Age :</span>
+        <br>
+        <input type="radio" name="rdAge" id="rdUnder18" checked> Em chưa 18
+        <br>
+        <input type="radio" name="rdAge" id="rdAbove18"> Đủ tuổi kiếm người yêu rồi
+        <br>
+        <h3>Your profile</h3>
+        <span>Biography :</span>
+        <br>
+        <textarea name="txtThongTin" id="txtThongTin" width="450px" height="100px">...</textarea>
+        <br><br>
+        <span>Job Role :</span>
+        <br>
+        <select name="cbJob" id="cbJob">
+            <optgroup label="Web">
+                <option value="Front-End">Front-End Developer</option>
+                <option value="PHP">PHP Developer</option>
+                <option value="Python">Python Developer</option>
+                <option value="Rails">Rails Developer</option>
+                <option value="web">Web Designer</option>
+                <option value="WordPress">WordPress Developer</option>
+            </optgroup>
+            <optgroup  label="Mobile">
+                <option value="Android">Android Developer</option>
+                <option value="IOS">IOS Developer</option>
+                <option value="mobile">Mobile Designer</option>
+            </optgroup>
+            <optgroup label="Business">
+                <option value="Owner">Business Owner</option>
+                <option value="Free">Freelancer</option>
+            </optgroup>
+            <optgroup label="Other">
+                <option value="Secretary">Secretary</option>
+                <option value="Maintenance">Maintenance</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Đăng Ký" id="btnDK" name="btnDK">
+
+    </form>
+
+    <script>
+        document.getElementById("formDK").onsubmit = function() {
+            var ten = document.getElementById("txtUser").value;
+            var mk1 = document.getElementById("txtPass1").value;
+            var mk2 = document.getElementById("txtPass2").value;
+            var mail = document.getElementById("txtEmail").value;
+            var thongtin = document.getElementById("txtThongTin").value;
+            var job = document.getElementById("cbJob").value;
+            if (document.getElementById("rdUnder18").check == true) {
+                var gioitinh = "Em Chưa 18"
+            } else {
+                var gioitinh = "Em Đủ 18 tuổi rồi !! Yêu em đi !!";
+            }
+            //Kiểm tra Username
+            var exp1 = new RegExp("^[0-9a-z]{3,10}$", "i");
+            if (!exp1.test(ten)) {
+                alert("Tài khoản không hợp lệ !! \nXin nhập lại !!!");
+                document.getElementById("txtUser").focus();
+                return false;
+            }
+
+            //Kiểm tra Password
+            var exp2 = new RegExp("^\\S{3,8}$");
+            if (!exp2.test(mk1)) {
+                alert("Mật khẩu không hợp lệ !!\nXin nhập lại !!!");
+                document.getElementById("txtPass1").focus();
+                return false;
+            }
+
+            //Kiểm tra Confirm Password
+            if (mk1 !== mk2) {
+                alert("Mật khẩu nhập lại không giống mật khẩu!!!\nXin nhập lại !!!");
+                document.getElementById("txtPass2").focus();
+                return false;
+            }
+
+
+            var a = new Array();
+            a.push("Tên đăng nhập : " + ten);
+            a.push("Mật khẩu : " + mk1);
+            a.push("Email : " + mail);
+            a.push("Giới tính : " + gioitinh);
+            // a.push("Biography : " + txtThongTin);
+            a.push("Job : " + job);
+
+            var s = a.join("\n");
+            document.getElementById("txtThongTin").value = s;
+            alert(s);
+            return false;
+        }
+    </script>
+</body>
+
+
+</html>
