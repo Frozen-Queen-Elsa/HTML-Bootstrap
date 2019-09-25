@@ -35,7 +35,7 @@
             <div class="register">
                 <!-- Khởi tạo form -->
                 <!-- class table_form để tiện cho việc chỉnh sửa css của trang web CodeMau_tableform.html -->
-                <form class="table_form" action="ass08_home.html" id="formRegister" name="formRegister">
+                <form class="table_form" action="Thi_Exam2_Home.html" id="formRegister" name="formRegister">
                     <!-- Khởi tạo Table Header -->
                     <table>
                         <thead>
@@ -68,12 +68,12 @@
                             <tr>
                                 <!-- Email Email -->
                                 <td>Email</td>
-                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" required></td>
+                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" pattern="[0-9a]{10,11}"required></td>
                             </tr>
                             <tr>
                                 <!-- Number Phone -->
                                 <td>Phone Number</td>
-                                <td><input type="number" name="txtPhone" id="txtPhone" value="0987654321" required></td>
+                                <td><input type="text" name="txtPhone" id="txtPhone" value="0987654321" pattern="[0-9]{10,11}" required></td>
                             </tr>
                             <tr>
                                 <td>Section</td>
@@ -126,6 +126,15 @@
             var gender = "Female";
         }
 
+
+        var ngaysinh = new Date(dob);
+        var current = new Date();
+        var tuoi = current.getFullYear() - ngaysinh.getFullYear();
+        if (tuoi < 15) {
+            alert("Em Chưa 15 !!\n Em chưa đủ tuổi đăng ký nhé!!");
+            document.getElementById("txtDoB").focus();
+            return false;
+        }
 
 
         //Khai báo mảng 
