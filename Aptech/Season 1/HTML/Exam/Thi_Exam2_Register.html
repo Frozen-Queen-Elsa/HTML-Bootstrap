@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi_Exam2_Register</title>
+    <!-- Grid.css -->
+    <link rel="stylesheet" href="Gird css/grid.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/cc7d5b8894.js" crossorigin="anonymous"></script>
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="css/Thi_Exam2.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>
+            Streamline
+        </h1>
+        <div class="nav">
+            <div class="row">
+                <div class="col span-1-of-5"><a href="Thi_Exam2_Home.html">HOME</a></div>
+                <div class="col span-1-of-5"><a href="#">ENGLISHCOURSE</a></div>
+                <div class="col span-1-of-5"><a href="#">TRAINING CENTERS</a></div>
+                <div class="col span-1-of-5"><a href="Thi_Exam2_Register.html">REGISTER</a></div>
+                <div class="col span-1-of-5"><a href="#">CONTACT</a></div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="register">
+                <!-- Khởi tạo form -->
+                <!-- class table_form để tiện cho việc chỉnh sửa css của trang web CodeMau_tableform.html -->
+                <form class="table_form" action="ass08_home.html" id="formRegister" name="formRegister">
+                    <!-- Khởi tạo Table Header -->
+                    <table>
+                        <thead>
+                            <h1>Student Information</h1>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- Text Name -->
+                                <td>Full Name</td>
+                                <td><input type="text" name="txtName" id="txtName" value="Seo Joo Hyun (서주현)" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Radio Gender -->
+                                <td>Gender</td>
+                                <td>
+                                    <input type="radio" name="rdGender" id="rdMale"> Male
+                                    <input type="radio" name="rdGender" id="rdFemale" checked> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Date Date of Birth  (yyyy-mm-dd) -->
+                                <td>Date of Birth</td>
+                                <td><input type="date" name="txtDOB" id="txtDOB" value="1991-06-28"></td>
+                            </tr>
+                            <tr>
+                                <!-- Text Address -->
+                                <td>Address</td>
+                                <td><input type="text" name="txtAddress" id="txtAddress" value="SM Tower, Seoul, Korea"></td>
+                            </tr>
+                            <tr>
+                                <!-- Email Email -->
+                                <td>Email</td>
+                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" required></td>
+                            </tr>
+                            <tr>
+                                <!-- Number Phone -->
+                                <td>Phone Number</td>
+                                <td><input type="number" name="txtPhone" id="txtPhone" value="0987654321" required></td>
+                            </tr>
+                            <tr>
+                                <td>Section</td>
+                                <td>
+                                    <select name="cbQualification" id="cbQualification">
+                                <option value="Diploma">Diploma</option>
+                                <option value="Bachelor Degree">Bachelor Degree</option>
+                                <option value="Master">Master</option>
+                            </select>
+                                </td>
+                                <tr>
+                                    <!-- Textarea Comment -->
+                                    <td>Comment</td>
+                                    <td><textarea name="txtComment" id="txtComment"></textarea></td>
+                                </tr>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <!-- Ghép 2 cột thành 1 -->
+                                <td colspan="2">
+                                    <!-- Button Submit -->
+                                    <input type="submit" value="Submit" id="btnRegister" name="btnRegister">
+                                    <!-- Button Reset -->
+                                    <input type="reset" value="Reset" id="btnReset" name="btnReset">
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("formRegister").onsubmit = function() {
+        //Khai báo các giá trị dữ liệu trong form
+        var name = document.getElementById("txtName").value;
+        var email = document.getElementById("txtEmail").value;
+        var dob = document.getElementById("txtDOB").value;
+        var phone = document.getElementById("txtPhone").value;
+        var address = document.getElementById("txtAddress").value;
+        var qualification = document.getElementById("cbQualification").value;
+        var comment = document.getElementById("txtComment").value;
+        //Check Gender Nam or Nữ
+        if (document.getElementById("rdMale").checked == true) {
+            var gender = "Male"
+        } else {
+            var gender = "Female";
+        }
+
+
+
+        //Khai báo mảng 
+        var a = new Array();
+        a.push("Member Information");
+        a.push("------------------");
+        a.push("Full name : " + name);
+        a.push("Gender : " + gender);
+        a.push("Birthday : " + dob);
+        a.push("Address : " + address);
+        a.push("Email : " + email);
+        a.push("Phone : " + phone);
+        a.push("Qualification : " + qualification);
+        a.push("Comment : " + comment);
+        a.push("---------------------------------------------------");
+        a.push("Thank you to become a new member of our website !!!");
+        //Khai báo chuỗi s là chuỗi a được nối với nhau bằng khoảng trắng
+        var s = a.join("\n");
+        //Thông báo thông tin đã được đăng ký
+        alert(s);
+        return false;
+    };
+</script>
+
+</html>
