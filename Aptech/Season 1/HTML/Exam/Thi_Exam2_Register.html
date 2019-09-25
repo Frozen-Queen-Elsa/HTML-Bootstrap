@@ -68,7 +68,7 @@
                             <tr>
                                 <!-- Email Email -->
                                 <td>Email</td>
-                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" pattern="[0-9a]{10,11}"required></td>
+                                <td><input type="email" name="txtEmail" id="txtEmail" value="Seohyun@snsd.com" required></td>
                             </tr>
                             <tr>
                                 <!-- Number Phone -->
@@ -135,7 +135,15 @@
             document.getElementById("txtDoB").focus();
             return false;
         }
-
+        //kiem tra xem mail co hop le hay khong
+        var exp1 = /^\w+@+gmail+\.com$/i;
+        var exp2 = /^\w+@+yahoo+\.com$/i;
+        var exp3 = /^\w+@+snsd+\.com$/i;
+        if (exp1.test(email) == false && exp2.test(email) == false && exp3.test(email) == false) {
+            alert("Vui long nhap lai mail!!");
+            document.getElementById("txtEmail").focus();
+            return false;
+        }
 
         //Khai báo mảng 
         var a = new Array();
